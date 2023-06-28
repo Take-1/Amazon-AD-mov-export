@@ -23,21 +23,10 @@ for i in input_list:
             print("please only add left and right wavs named L.wav and R.wav")
             exit()
 
-    command = [
-        "ffmpeg.exe",
-        "-i",
-        f"{i_path}\\L.wav",
-        "-i",
-        f"{i_path}\\R.wav",
-        "-map",
-        "0",
-        "-map",
-        "1",
-        "-vcodec",
-        "copy",
-        "-acodec",
-        "copy",
-        os.path.join(output, i + ".mov"),
-    ]
+    command = ["ffmpeg.exe", "-i", f"{i_path}\\L.wav", "-i", f"{i_path}\\R.wav", 
+            "-map", "0", "-map", "1", 
+            "-metadata:s:a:0", "title=Left", "-metadata:s:a:1", "title=Right",
+            "-vcodec", "copy", "-acodec", "copy", 
+            os.path.join(output, i + ".mov")] 
 
     call(command)
