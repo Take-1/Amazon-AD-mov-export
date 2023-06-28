@@ -9,7 +9,7 @@ Using FFMEPG + python:
 - You must have python 3 installed on your PC
 
 ### Instructions
-1. Download the repo and run the get_ffmpeg.bat to download FFMPEG 5.1.2
+1. Download the repo and run the setup.bat file to download FFMPEG 5.1.2 and create the input and output folders
 2. In the input folder; create a subfolder with the same name as your intended ouptut file
 3. In the new subfolder; copy and paste the Left and Right wav files and rename them L.wav and R.wav
 4. Return to the main folder and run the START APP.bat file
